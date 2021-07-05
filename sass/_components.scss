@@ -42,3 +42,23 @@
 		color: $light-red;
 	}
 }
+
+.section-heading {
+	font-family: "Overpass", sans-serif;
+	text-align: center;
+	color: $very-dark-blue;
+	margin: 2em 0;
+	font-size: 3rem;
+
+	@media (min-width: 768px) {
+		font-size: 4rem;
+	}
+}
+
+.section-padding {
+	padding: 3em 1em;
+
+	@media (min-width: 768px) {
+		padding: 5em 1em;
+	}
+}

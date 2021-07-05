@@ -179,7 +179,7 @@ ul {
 	&__buttons-btn {
 		padding: 0.75em 1.5em;
 		margin: 0 0.5em;
-		color: $light-red;
+		color: $good-contrast-red;
 		border-radius: 30px;
 
 		font-weight: 700;
@@ -193,6 +193,31 @@ ul {
 			border: 2px solid $white;
 			color: $white;
 		}
+	}
+}
+
+.future {
+	&__box {
+		&-img {
+			img {
+				width: 100%;
+			}
+		}
+		&-info {
+			text-align: center;
+		}
+	}
+	&__heading {
+		font-family: "Overpass", sans-serif;
+		margin: 2em 0;
+		font-size: 2.8rem;
+		color: $very-dark-black-blue;
+	}
+	&__text {
+		font-size: 1.6rem;
+
+		line-height: 3rem;
+		color: $very-dark-grayish-blue;
 	}
 }
 
@@ -251,7 +276,7 @@ ul {
 
 					a {
 						padding: 2em;
-						color: $light-red;
+						color: $good-contrast-red;
 					}
 					&:hover {
 						background-color: transparent;
@@ -281,6 +306,30 @@ ul {
 			}
 		}
 	}
+
+	.future {
+		overflow: hidden;
+		&__box {
+			display: flex;
+			align-items: center;
+
+			&-img {
+				order: 1;
+				img {
+					width: 120%;
+				}
+			}
+			&-info {
+				width: 50%;
+
+				text-align: left;
+			}
+		}
+		&__heading {
+			margin-top: 2em;
+			margin-bottom: 0.2em;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -295,6 +344,21 @@ ul {
 			&-item {
 				margin: 0 1em;
 			}
+		}
+	}
+	.future {
+		&__box {
+			&-img {
+				img {
+					content: url("../img/illustration-editor-desktop.svg");
+					width: 100%;
+					margin-left: 5em;
+				}
+			}
+		}
+		&__heading {
+			margin-top: 2em;
+			margin-bottom: 1em;
 		}
 	}
 }

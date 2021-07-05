@@ -53,6 +53,30 @@
   color: #ff525d;
 }
 
+.section-heading {
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  color: #1f3f5b;
+  margin: 2em 0;
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 4rem;
+  }
+}
+
+.section-padding {
+  padding: 3em 1em;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5em 1em;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -276,7 +300,7 @@ ul {
 .header__buttons-btn {
   padding: 0.75em 1.5em;
   margin: 0 0.5em;
-  color: #ff525d;
+  color: #9a2c33;
   border-radius: 30px;
   font-weight: 700;
   font-size: 1.4rem;
@@ -289,6 +313,27 @@ ul {
   background: none;
   border: 2px solid white;
   color: white;
+}
+
+.future__box-img img {
+  width: 100%;
+}
+
+.future__box-info {
+  text-align: center;
+}
+
+.future__heading {
+  font-family: "Overpass", sans-serif;
+  margin: 2em 0;
+  font-size: 2.8rem;
+  color: #25252d;
+}
+
+.future__text {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #4b5862;
 }
 
 @media (min-width: 576px) {
@@ -352,7 +397,7 @@ ul {
   }
   .nav__list-item--button a {
     padding: 2em;
-    color: #ff525d;
+    color: #9a2c33;
   }
   .nav__list-item--button:hover {
     background-color: transparent;
@@ -373,6 +418,33 @@ ul {
     margin: 0 1.5em;
     font-size: 1.8rem;
   }
+  .future {
+    overflow: hidden;
+  }
+  .future__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .future__box-img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .future__box-img img {
+    width: 120%;
+  }
+  .future__box-info {
+    width: 50%;
+    text-align: left;
+  }
+  .future__heading {
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -384,6 +456,15 @@ ul {
   }
   .nav__list-item {
     margin: 0 1em;
+  }
+  .future__box-img img {
+    content: url("../img/illustration-editor-desktop.svg");
+    width: 100%;
+    margin-left: 5em;
+  }
+  .future__heading {
+    margin-top: 2em;
+    margin-bottom: 1em;
   }
 }
 
