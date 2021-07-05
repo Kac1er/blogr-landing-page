@@ -1,0 +1,12 @@
+@mixin whiteLink {
+	text-decoration: none;
+	color: $white;
+}
+
+@mixin absoluteCenterHorizontally {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+    
+}

@@ -18,3 +18,294 @@ body {
 	font-family: "Ubuntu", sans-serif;
 	font-size: 1.6rem;
 }
+
+a {
+	@include whiteLink;
+}
+ul {
+	list-style: none;
+}
+
+.nav {
+	@include absoluteCenterHorizontally;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	top: 10px;
+	width: 100%;
+	max-width: 1300px;
+
+	padding: 0 1em;
+	z-index: 1;
+
+	&__list {
+		@include absoluteCenterHorizontally;
+		display: none;
+		position: absolute;
+		top: 80px;
+		width: 80%;
+		height: 380px;
+		background-color: $white;
+		box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.3);
+
+		&--active {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			animation: navListSlide 0.4s ease-in-out;
+		}
+		&-item {
+			padding: 1em 0;
+			text-align: center;
+
+			a {
+				padding: 1em;
+				color: $dark;
+				font-family: "Overpass", sans-serif;
+			}
+
+			&--button {
+				background-color: $light-red;
+				border-radius: 25px;
+
+				a {
+					padding: 1em 2.5em;
+					color: $white;
+					font-weight: 700;
+				}
+			}
+
+			&:nth-child(4) {
+				width: 80%;
+				margin-top: 3em;
+				border-top: 1px solid $grayish-blue;
+			}
+		}
+	}
+
+	&__burger-btn {
+		padding: 1em 0 2em 2em;
+		transition: transform 0.3s 0.1s ease-in-out;
+		background: none;
+		border: none;
+
+		&:focus {
+			.nav__burger-btn-box {
+				border: 1px solid $dark;
+			}
+		}
+
+		&-box {
+			display: inline-block;
+			position: relative;
+			width: 35px;
+			height: 24px;
+			border: 1px solid transparent;
+		}
+		&-bars {
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+			}
+			&::before {
+				top: -10px;
+			}
+			&::after {
+				top: 10px;
+			}
+		}
+		&-bars,
+		&-bars::before,
+		&-bars::after {
+			width: 100%;
+			height: 3px;
+			background-color: $white;
+			position: absolute;
+			transition: transform 0.2s 0.2s ease-in-out,
+				background-color 0.2s 0.2s ease-in-out;
+		}
+
+		&--active {
+			.nav__burger-btn-bars::before {
+				transform: translateY(10px) rotate(45deg);
+			}
+			.nav__burger-btn-bars::after {
+				transform: translateY(-10px) rotate(-45deg);
+			}
+			.nav__burger-btn-bars {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 90vh;
+	padding: 8em 1em;
+	background: url("../img/bg-pattern-intro.svg");
+	background-size: 300%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: $light-red-gradient;
+	color: $white;
+	text-align: center;
+	font-family: "Overpass", sans-serif;
+	border-bottom-left-radius: 120px;
+	&__heading {
+		margin: 1em 0;
+		font-size: 3.2rem;
+		font-weight: 600;
+	}
+	&__description {
+		margin-bottom: 2.5em;
+		font-size: 1.8rem;
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__buttons-btn {
+		padding: 0.75em 1.5em;
+		margin: 0 0.5em;
+		color: $light-red;
+		border-radius: 30px;
+
+		font-weight: 700;
+		font-size: 1.4rem;
+		cursor: pointer;
+		border: 2px solid $white;
+		background-color: $white;
+
+		&--secondary {
+			background: none;
+			border: 2px solid $white;
+			color: $white;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.header {
+		padding: 8em 3em;
+		&__heading {
+			font-size: 4.5rem;
+		}
+		&__description {
+			font-size: 2.4rem;
+		}
+
+		&__buttons {
+			&-btn {
+				padding: 1em 2em;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		top: 20px;
+		&__list {
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: translate(0);
+			height: auto;
+			width: 100%;
+			margin-left: 1em;
+			background: none;
+			box-shadow: none;
+
+			&-item {
+				padding: 0.7em 0;
+				margin: 0 0.5em;
+				a {
+					color: $white;
+				}
+
+				&:nth-child(4) {
+					width: auto;
+					margin-left: auto;
+					margin-top: 0;
+					border-top: none;
+				}
+				&--button {
+					transition: background-color 0.3s, color 0.3s;
+					background-color: $white;
+					border: 2px solid $white;
+
+					a {
+						padding: 2em;
+						color: $light-red;
+					}
+					&:hover {
+						background-color: transparent;
+						a {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		&__burger-btn {
+			display: none;
+		}
+	}
+	.header {
+		&__heading {
+			font-size: 5rem;
+		}
+		&__description {
+			font-size: 2.8rem;
+		}
+
+		&__buttons {
+			&-btn {
+				margin: 0 1.5em;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		background-size: 200%;
+		&__heading {
+			font-size: 7rem;
+		}
+	}
+	.nav {
+		&__list {
+			&-item {
+				margin: 0 1em;
+			}
+		}
+	}
+}
+
+@keyframes navListSlide {
+	from {
+		opacity: 0;
+		transform: translate(-50%, 50px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}

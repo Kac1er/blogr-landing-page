@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Blogr Landing Page design from frontendmentor.io"
+		/>
 		<link rel="icon" type="image/png" href="./img/favicon-32x32.png" />
 		<title>Blogr Landing Page</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,8 +18,55 @@
 		/>
 
 		<link rel="stylesheet" href="./css/main.css" />
+
+		<script
+			src="https://kit.fontawesome.com/d1d0df6f6f.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
+		<nav class="nav">
+			<a href="#" class="nav__logo"
+				><img src="./img/logo.svg" alt="Blogr logo icon"
+			/></a>
+			<button class="nav__burger-btn" aria-label="Burger Button">
+				<div class="nav__burger-btn-box">
+					<div class="nav__burger-btn-bars"></div>
+				</div>
+			</button>
+			<ul class="nav__list">
+				<li class="nav__list-item link-animation"><a href="#">Product</a></li>
+				<li class="nav__list-item link-animation"><a href="#">Company</a></li>
+				<li class="nav__list-item link-animation"><a href="#">Connect</a></li>
+				<li class="nav__list-item link-animation">
+					<a href="#">Login</a>
+				</li>
+				<li class="nav__list-item nav__list-item--button ">
+					<a href="#">Sign Up</a>
+				</li>
+			</ul>
+		</nav>
+		<header class="header">
+			<div class="wrapper">
+				<h1 class="header__heading">A modern publishing platform</h1>
+				<p class="header__description">
+					Grow your audience and build your online brand
+				</p>
+				<div class="header__buttons">
+					<button class="header__buttons-btn btn-primary-animation">
+						Start for Free
+					</button>
+					<button
+						class="
+							header__buttons-btn header__buttons-btn--secondary
+							btn-secondary-animation
+						"
+					>
+						Learn More
+					</button>
+				</div>
+			</div>
+		</header>
 		<script src="./js/main.js"></script>
 	</body>
 </html>
