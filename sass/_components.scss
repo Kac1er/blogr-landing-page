@@ -2,6 +2,10 @@
 	width: 100%;
 	max-width: 1500px;
 	margin: 0 auto;
+
+	@media (min-width: 1200px) {
+		padding: 0 2em;
+	}
 }
 
 .link-animation {
