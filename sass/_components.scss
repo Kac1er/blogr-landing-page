@@ -1,8 +1,7 @@
 .wrapper {
 	width: 100%;
-	max-width: 1300px;
+	max-width: 1500px;
 	margin: 0 auto;
-	
 }
 
 .link-animation {
@@ -61,5 +60,70 @@
 
 	@media (min-width: 768px) {
 		padding: 5em 1em;
+	}
+}
+
+.regular-section {
+	&__box {
+		&-img {
+			img {
+				width: 100%;
+			}
+		}
+		&-info {
+			text-align: center;
+		}
+	}
+	&__heading {
+		font-family: "Overpass", sans-serif;
+		margin: 2em 0;
+		font-size: 2.8rem;
+		color: $very-dark-black-blue;
+	}
+	&__text {
+		font-size: 1.6rem;
+
+		line-height: 3rem;
+		color: $very-dark-grayish-blue;
+	}
+
+	@media (min-width: 768px) {
+		overflow: hidden;
+		&__box {
+			display: flex;
+			align-items: center;
+
+			&-img {
+				order: 1;
+				padding-right: 2em;
+				img {
+					width: 120%;
+				}
+			}
+			&-info {
+				width: 50%;
+
+				text-align: left;
+			}
+		}
+		&__heading {
+			margin-top: 2em;
+			margin-bottom: 0.2em;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		&__box {
+			&-img {
+				img {
+					width: 100%;
+					margin-left: 3em;
+				}
+			}
+		}
+		&__heading {
+			margin-top: 2em;
+			margin-bottom: 1em;
+		}
 	}
 }
