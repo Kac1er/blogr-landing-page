@@ -50,7 +50,7 @@
 
 .btn-secondary-animation:hover {
   background-color: white;
-  color: #ff525d;
+  color: #9a2c33;
 }
 
 .section-heading {
@@ -88,10 +88,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -336,6 +337,44 @@ ul {
   color: #4b5862;
 }
 
+.infrastructure {
+  position: relative;
+  margin-top: 12em;
+  height: auto;
+  background: url("../img/bg-pattern-circles.svg"), #2c2d3f;
+  background-size: 500px;
+  background-position: -100px -200px;
+  background-repeat: no-repeat;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+.infrastructure__box-img {
+  position: relative;
+  top: -180px;
+}
+
+.infrastructure__box-img img {
+  width: 100%;
+}
+
+.infrastructure__box-info {
+  position: relative;
+  top: -100px;
+  text-align: center;
+  color: white;
+}
+
+.infrastructure__heading {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  line-height: 1.4em;
+}
+
+.infrastructure__text {
+  line-height: 2em;
+}
+
 @media (min-width: 576px) {
   .header {
     padding: 8em 3em;
@@ -433,6 +472,7 @@ ul {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    padding-right: 2em;
   }
   .future__box-img img {
     width: 120%;
@@ -444,6 +484,36 @@ ul {
   .future__heading {
     margin-top: 2em;
     margin-bottom: 0.2em;
+  }
+  .infrastructure {
+    background-size: 700px;
+    background-position: -200px -300px;
+    height: 330px;
+  }
+  .infrastructure__box {
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .infrastructure__box-img {
+    width: 40%;
+    position: relative;
+    top: -120px;
+    left: -20px;
+  }
+  .infrastructure__box-img img {
+    width: 350px;
+  }
+  .infrastructure__box-info {
+    position: static;
+    width: 60%;
+    text-align: left;
+    margin-left: 2em;
+  }
+  .infrastructure__text {
+    line-height: 1.6em;
+    font-size: 1.7rem;
   }
 }
 
@@ -465,6 +535,27 @@ ul {
   .future__heading {
     margin-top: 2em;
     margin-bottom: 1em;
+  }
+  .infrastructure {
+    height: 500px;
+    background-size: 900px;
+  }
+  .infrastructure__box-img {
+    top: -130px;
+  }
+  .infrastructure__box-img img {
+    width: 600px;
+  }
+  .infrastructure__box-info {
+    margin-top: 4em;
+    margin-left: 5em;
+    width: 50%;
+  }
+  .infrastructure__heading {
+    font-size: 4rem;
+  }
+  .infrastructure__text {
+    font-size: 1.8rem;
   }
 }
 

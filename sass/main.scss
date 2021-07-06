@@ -12,10 +12,11 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
-	font-family: "Ubuntu", sans-serif;
+	font-family: "Overpass", sans-serif;
 	font-size: 1.6rem;
 }
 
@@ -221,6 +222,46 @@ ul {
 	}
 }
 
+.infrastructure {
+	position: relative;
+	margin-top: 12em;
+	height: auto;
+	background: url("../img/bg-pattern-circles.svg"),
+		$very-dark-gray-blue-gradient;
+	background-size: 500px;
+	background-position: -100px -200px;
+	background-repeat: no-repeat;
+	border-top-right-radius: 70px;
+	border-bottom-left-radius: 70px;
+
+	&__box {
+		// position: relative;
+		// top: -180px;
+
+		&-img {
+			position: relative;
+			top: -180px;
+			img {
+				width: 100%;
+			}
+		}
+		&-info {
+			position: relative;
+			top: -100px;
+			text-align: center;
+			color: $white;
+		}
+	}
+	&__heading {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		line-height: 1.4em;
+	}
+	&__text {
+		line-height: 2em;
+	}
+}
+
 @media (min-width: 576px) {
 	.header {
 		padding: 8em 3em;
@@ -315,6 +356,7 @@ ul {
 
 			&-img {
 				order: 1;
+				padding-right: 2em;
 				img {
 					width: 120%;
 				}
@@ -329,6 +371,39 @@ ul {
 			margin-top: 2em;
 			margin-bottom: 0.2em;
 		}
+	}
+	.infrastructure {
+		background-size: 700px;
+		background-position: -200px -300px;
+		height: 330px;
+		&__box {
+			top: 0;
+			display: flex;
+
+			&-img {
+				width: 40%;
+				position: relative;
+				top: -120px;
+				left: -20px;
+
+				img {
+					width: 350px;
+				}
+			}
+
+			&-info {
+				position: static;
+				width: 60%;
+				text-align: left;
+				margin-left: 2em;
+				
+			}
+		}
+		&__text {
+			line-height: 1.6em;
+			font-size: 1.7rem;
+		}
+
 	}
 }
 
@@ -359,6 +434,30 @@ ul {
 		&__heading {
 			margin-top: 2em;
 			margin-bottom: 1em;
+		}
+	}
+	.infrastructure {
+		height: 500px;
+		background-size: 900px;
+		&__box {
+			&-img {
+				top: -130px;
+
+				img {
+					width: 600px;
+				}
+			}
+			&-info {
+				margin-top: 4em;
+				margin-left: 5em;
+				width: 50%;
+			}
+		}
+		&__heading {
+			font-size: 4rem;
+		}
+		&__text {
+			font-size: 1.8rem;
 		}
 	}
 }
