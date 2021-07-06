@@ -17,4 +17,4 @@ Project is created with:
 * JavaScript (Not much, but still)
 	
 ## Live
-You can check how this site looks right now! (It's not yet finished) [Click! (hosted on netlify)](https://vibrant-agnesi-c34cee.netlify.app/)
+You can check how this site looks right now! [Click! (hosted on netlify)](https://vibrant-agnesi-c34cee.netlify.app/)
