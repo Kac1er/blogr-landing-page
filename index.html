@@ -18,6 +18,10 @@
 		/>
 
 		<link rel="stylesheet" href="./css/main.css" />
+		<script
+			src="https://kit.fontawesome.com/d1d0df6f6f.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<nav class="nav">
@@ -30,8 +34,26 @@
 				</div>
 			</button>
 			<ul class="nav__list">
-				<li class="nav__list-item link-animation"><a href="#">Product</a></li>
-				<li class="nav__list-item link-animation"><a href="#">Company</a></li>
+				<li class="nav__list-item">
+					<a href="#">Product <i class="fas fa-chevron-down"></i></a>
+					<ul class="nav__list-dropdown">
+						<li class="nav__list-dropdown-item"><a href="#">Overview</a></li>
+						<li class="nav__list-dropdown-item">
+							<a href="https://www.google.com/">Newsletter</a>
+						</li>
+						<li class="nav__list-dropdown-item"><a href="#">LinkedIn</a></li>
+					</ul>
+				</li>
+				<li class="nav__list-item link-animation">
+					<a href="#">Company <i class="fas fa-chevron-down"></i></a>
+					<ul class="nav__list-dropdown">
+						<li class="nav__list-dropdown-item"><a href="#">Overview</a></li>
+						<li class="nav__list-dropdown-item">
+							<a href="https://www.google.com/">Newsletter</a>
+						</li>
+						<li class="nav__list-dropdown-item"><a href="#">LinkedIn</a></li>
+					</ul>
+				</li>
 				<li class="nav__list-item link-animation"><a href="#">Connect</a></li>
 				<li class="nav__list-item link-animation">
 					<a href="#">Login</a>
@@ -100,7 +122,6 @@
 				</div>
 			</section>
 			<section class="infrastructure section-padding">
-			
 				<div class="wrapper">
 					<div class="infrastructure__box">
 						<div class="infrastructure__box-img">

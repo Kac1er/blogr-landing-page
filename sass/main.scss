@@ -27,6 +27,25 @@ ul {
 	list-style: none;
 }
 
+.dropdown {
+	position: absolute;
+	background-color: green;
+	left: 50%;
+	padding: 0 3em;
+	transform: translateX(-50%) scaleY(0);
+	transition: transform 0.3s;
+	transform-origin: top;
+
+	li {
+		padding: 0.4em 0;
+		cursor: pointer;
+
+		&:hover {
+			background-color: blue;
+		}
+	}
+}
+
 .nav {
 	@include absoluteCenterHorizontally;
 	display: flex;
@@ -45,7 +64,8 @@ ul {
 		position: absolute;
 		top: 80px;
 		width: 80%;
-		height: 380px;
+		min-height: 380px;
+		padding: 1em 0;
 		background-color: $white;
 		box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.3);
 
@@ -56,9 +76,50 @@ ul {
 			align-items: center;
 			animation: navListSlide 0.4s ease-in-out;
 		}
+		&-dropdown {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			height: 0;
+			padding: 0 2em;
+			margin-top: 0.4em;
+
+			background-color: $mobile-dropdown-background;
+			overflow: hidden;
+			transition: height 0.3s, transform 0.3s;
+			transform-origin: top;
+
+			&-item {
+				padding: 1em;
+
+				a {
+					transition: font-weight 0.3s;
+					&:hover {
+						font-weight: 700;
+					}
+				}
+			}
+		}
 		&-item {
+			position: relative;
 			padding: 1em 0;
 			text-align: center;
+
+			i {
+				margin-left: 0.2em;
+				color: $light-red;
+				transition: transform 0.3s;
+			}
+
+			&:hover {
+				i {
+					transform: rotate(-180deg);
+				}
+				.nav__list-dropdown {
+					height: 160px;
+				}
+			}
 
 			a {
 				padding: 1em;
@@ -90,12 +151,6 @@ ul {
 		transition: transform 0.3s 0.1s ease-in-out;
 		background: none;
 		border: none;
-
-		&:focus {
-			.nav__burger-btn-box {
-				border: 1px solid $dark;
-			}
-		}
 
 		&-box {
 			display: inline-block;
@@ -259,7 +314,6 @@ ul {
 		color: $white;
 	}
 	&__list {
-
 		&-item {
 			padding: 0.5em 0;
 
@@ -300,6 +354,7 @@ ul {
 			left: 0;
 			top: 0;
 			transform: translate(0);
+			min-height: unset;
 			height: auto;
 			width: 100%;
 			margin-left: 1em;
@@ -309,6 +364,15 @@ ul {
 			&-item {
 				padding: 0.7em 0;
 				margin: 0 0.5em;
+				&:hover {
+					.nav__list-dropdown {
+						height: auto;
+						transform: scaleY(1);
+					}
+				}
+				i {
+					color: $white;
+				}
 				a {
 					color: $white;
 				}
@@ -333,6 +397,26 @@ ul {
 						a {
 							color: $white;
 						}
+					}
+				}
+			}
+			&-dropdown {
+				position: absolute;
+
+				transform: scaleY(0);
+				background-color: $white;
+				align-items: flex-start;
+				width: 150px;
+				box-shadow: 0 4px 10px 0 hsla(0, 0, 0, 0.4);
+				border-radius: 5px;
+				padding: 1em 0;
+
+				&-item {
+					padding: 0.5em;
+
+					a {
+						font-size: 1.6rem;
+						color: $dark;
 					}
 				}
 			}
